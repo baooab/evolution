@@ -13,3 +13,7 @@ A note on the evolution of important versions of popular front-end libraries/fra
 
 - Add `express.json` and `express.urlencoded` to parse bodies
 
+### [v4.15.0](https://github.com/expressjs/express/releases/tag/4.15.0)
+
+- Add `next("router")` to exit from router
+
