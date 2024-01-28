@@ -2,6 +2,14 @@
 
 A note on the evolution of important versions of popular front-end libraries/frameworks.
 
+## Node.js
+
+- [package.json："type" field](https://nodejs.org/api/packages.html#type)（v12.17.0） 
+- [ESM: Top-Level Await](https://nodejs.org/api/esm.html#top-level-await)（v14.8.0）
+- [package.json："exports" & "imports" patterns](https://nodejs.org/api/packages.html#exports) - replace `"main"` field（v12.20.0, v14.13.0）
+- [`node:` protocol imports](https://2ality.com/2021/12/node-protocol-imports.html)（v14.18.0, v16.0.0）
+- [fs/promises](https://nodejs.org/api/fs.html#promises-api) support（v14.0.0, via `require('fs').promises` from v10.1.0）
+
 ## Express
 
 ### [5.0.0-alpha.1](https://github.com/expressjs/express/releases/tag/5.0.0-alpha.1)
