@@ -10,6 +10,15 @@ A note on the evolution of important versions of popular front-end libraries/fra
 - [`node:` protocol imports](https://2ality.com/2021/12/node-protocol-imports.html)（v14.18.0, v16.0.0）
 - [fs/promises](https://nodejs.org/api/fs.html#promises-api) support（v14.0.0, via `require('fs').promises` from v10.1.0）
 
+## React
+
+### [v16.8](https://legacy.reactjs.org/blog/2019/02/06/react-v16.8.0.html)
+
+- [React Hooks](https://legacy.reactjs.org/docs/hooks-reference.html)
+  - Basic Hooks: `useState`, `useEffect`, `useContext`
+  - Additional Hooks: `useReducer`, `useCallback`, `useMemo`, `useRef`, `useImperativeHandler`, `useLayoutEffect`, `useDebugValue`, `useDeferredValue`, `useTransition`, `useId` 
+  - Library Hooks: `useSyncExternalStore`, `useInsertionEffect`
+
 ## Express
 
 ### [5.0.0-alpha.1](https://github.com/expressjs/express/releases/tag/5.0.0-alpha.1)
