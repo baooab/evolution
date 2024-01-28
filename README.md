@@ -12,6 +12,69 @@ A note on the evolution of important versions of popular front-end libraries/fra
 
 ## React
 
+### [v18](https://react.dev/blog/2022/03/29/react-v18)
+
+- `ReactDOM.render` is no longer supported in React 18.
+
+```jsx
+// Before
+import { render } from 'react-dom';
+render(<App tab="home" />, document.getElementById('app'));
+
+// After
+import { createRoot } from 'react-dom/client';
+const root = createRoot(document.getElementById('app')); // createRoot(document.getElementById('app')!) if you use TypeScript
+root.render(<App tab="home" />);
+```
+- changed `unmountComponentAtNode` to `root.unmount`.
+
+```jsx
+// Before
+unmountComponentAtNode(container);
+
+// After
+root.unmount();
+```
+
+- removed the `callback` from render.
+
+```jsx
+// Before
+const container = document.getElementById('app');
+render(<App tab="home" />, container, () => {
+  console.log('rendered');
+});
+
+// After
+function AppWithCallbackAfterRender() {
+  useEffect(() => {
+    console.log('rendered');
+  });
+
+  return <App tab="home" />
+}
+
+const root = createRoot(document.getElementById('app'));
+root.render(<AppWithCallbackAfterRender />);
+```
+
+- Finally, if your app uses server-side rendering with hydration, upgrade `hydrate` to `hydrateRoot`.
+
+```jsx
+// Before
+import { hydrate } from 'react-dom';
+hydrate(<App tab="home" />, document.getElementById('app'));
+
+// After
+import { hydrateRoot } from 'react-dom/client';
+const container = ;
+const root = hydrateRoot(
+  document.getElementById('app'),
+  <App tab="home" />
+);
+// Unlike with `createRoot`, you don't need a separate root.render() call here.
+```
+
 ### [v16.8](https://legacy.reactjs.org/blog/2019/02/06/react-v16.8.0.html)
 
 - [React Hooks](https://legacy.reactjs.org/docs/hooks-reference.html)
