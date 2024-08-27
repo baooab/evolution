@@ -90,7 +90,7 @@ const root = hydrateRoot(
 
 remove:
 
-- `app.del - use `app.delete`
+- `app.del` - use `app.delete`
 - `req.acceptsCharset` - use `req.acceptsCharsets`
 - `req.acceptsEncoding` - use `req.acceptsEncodings`
 - `req.acceptsLanguage` - use `req.acceptsLanguages`
